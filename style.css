@@ -23,34 +23,34 @@
      --blue-500: #3B82F6;
 
      /* Sizing */
-     --radius-md: clamp(12px, calc(0.370370vw + 10.666667px), 16px);
-     --radius-lg: clamp(16px, calc(0.740741vw + 13.333333px), 24px);
-     --radius-xl: clamp(24px, calc(0.740741vw + 21.333333px), 32px);
-     --space-1: clamp(3px, calc(0.092593vw + 2.666667px), 4px);
-     --space-2: clamp(6px, calc(0.185185vw + 5.333333px), 8px);
-     --space-3: clamp(8px, calc(0.370370vw + 6.666667px), 12px);
-     --space-4: clamp(12px, calc(0.370370vw + 10.666667px), 16px);
-     --space-5: clamp(16px, calc(0.370370vw + 14.666667px), 20px);
-     --space-6: clamp(20px, calc(0.370370vw + 18.666667px), 24px);
-     --space-8: clamp(24px, calc(0.740741vw + 21.333333px), 32px);
-     --space-10: clamp(32px, calc(0.740741vw + 29.333333px), 40px);
-     --space-12: clamp(40px, calc(0.740741vw + 37.333333px), 48px);
-     --space-16: clamp(48px, calc(1.481481vw + 42.666667px), 64px);
-
+     --radius-md: 16px;
+     --radius-lg: 24px;
+     --radius-xl: 32px;
+     --radius-pill: 999px;
+     --space-1: 4px;
+     --space-2: 8px;
+     --space-3: 12px;
+     --space-4: 16px;
+     --space-5: 20px;
+     --space-6: 24px;
+     --space-8: 32px;
+     --space-10: 40px;
+     --space-12: 48px;
+     --space-16: 64px;
      --space-20: 6rem;
      --space-24: 8rem;
      --space-32: 12rem;
      --space-40: 15rem;
 
      /* Typography */
-     --fs-xs: clamp(11px, calc(0.092593vw + 10.666667px), 12px);
-     --fs-sm: clamp(13px, calc(0.092593vw + 12.666667px), 14px);
-     --fs-base: clamp(14px, calc(0.185185vw + 13.333333px), 16px);
-     --fs-lg: clamp(18px, calc(0.185185vw + 17.333333px), 20px);
-     --fs-xl: clamp(20px, calc(0.370370vw + 18.666667px), 24px);
-     --fs-2xl: clamp(24px, calc(0.740741vw + 21.333333px), 32px);
-     --fs-3xl: clamp(32px, calc(0.740741vw + 29.333333px), 40px);
-     --fs-4xl: clamp(40px, calc(1.481481vw + 34.666667px), 56px);
+     --fs-xs: 12px;
+     --fs-sm: 14px;
+     --fs-base: 16px;
+     --fs-lg: 20px;
+     --fs-xl: 24px;
+     --fs-2xl: 32px;
+     --fs-3xl: 40px;
+     --fs-4xl: 56px;
 
      --base-w: 1430;
      --base-h: 1200;
@@ -1904,5 +1904,17 @@
 
      .topbar {
          padding: 24px 0;
+     }
+ }
+
+ @media (min-width: 600px) {
+     body {
+         zoom: .79;
+     }
+ }
+
+ @media (min-width: 1440px) {
+     body {
+         zoom: 1;
      }
  }
