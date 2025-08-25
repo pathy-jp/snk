@@ -47,6 +47,9 @@
      --fs-2xl: 32px;
      --fs-3xl: 40px;
      --fs-4xl: 56px;
+
+     --base-w: 1430;
+     --base-h: 1200;
  }
 
  *,
@@ -215,6 +218,10 @@
  }
 
  body {
+     overflow: hidden;
+ }
+
+ body {
      margin: 0;
      background: var(--black);
      color: var(--gray-100);
@@ -228,29 +235,40 @@
 
  /* WRAPPER čo drží viewport a skaluje vnútro */
  .fit {
+     width: 100vw;
      height: 100dvh;
-     /* 100% výšky okna, rešpektuje iOS toolbary */
-     overflow: auto;
-     /* ak by bolo treba scrollovať (dlhé modaly a pod.) */
      display: grid;
-     place-items: start center;
-     /* centrovanie .app vodorovne, hore zvisle */
+     place-items: center;
+     /* vycentruje .app, footer ostane v spodnom riadku .app */
+     overflow: hidden;
+     /* žiadny scroll stránky */
+     background: var(--black);
+     /* pre istotu jednotné pozadie */
  }
 
- /* SCALE celého UI: keď je výška menšia než 1200px, zmenšíme */
+ /* SCALE celej aplikácie tak, aby sa vošla na šírku aj výšku */
  .fit>.app {
-     --base-h: 1200;
-     /* tvoja „logická“ výška v px */
-     --scale: min(1, 100dvh / (var(--base-h) * 1px));
-
-     height: calc(var(--base-h) * 1px);
+     /* z tvojich pôvodných štýlov: */
      width: min(1430px, 100vw);
-     /* tvoja pôvodná šírka */
-     transform: scale(var(--scale));
-     transform-origin: top center;
+     height: 1200px;
+     margin: 0;
+     /* nech nič neposúva */
+     /* GRID už máš: grid-template-rows: auto 1fr auto; => footer je dole */
 
-     /* voliteľné: aby si neprišiel o layout, nechaj ostatné tvoje vlastnosti */
-     /* display/grid/gap/container-type atď. zostávajú tak ako máš */
+     /* kľúč: vypočítaj scale podľa oboch rozmerov a zober menšie (contain) */
+     --sx: calc(100vw / (var(--base-w) * 1px));
+     --sy: calc(100dvh / (var(--base-h) * 1px));
+     --scale: min(1, min(var(--sx), var(--sy)));
+
+     transform: scale(var(--scale));
+     transform-origin: center center;
+     /* centrovanie v oboch smeroch, footer zostane na spodku rámu */
+ }
+
+ /* Ak máš modaly/fix overlaye, nech sa škálujú spolu s plátnom */
+ .fit .modal {
+     position: absolute;
+     inset: 0;
  }
 
  .app {
@@ -1902,4 +1920,23 @@
 
  .modal[aria-hidden="false"] .modal-dialog.accent-indigo {
      box-shadow: 0 16px 64px rgba(38, 21, 68, .22);
+ }
+
+ @media (max-height: 900px) {
+     .btn {
+         padding: 14px 22px;
+         font-size: 18px;
+     }
+
+     .kpi-card {
+         padding: 16px 20px;
+     }
+
+     .stat-card {
+         padding: 20px;
+     }
+
+     .topbar {
+         padding: 24px 0;
+     }
  }
