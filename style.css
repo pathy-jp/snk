@@ -226,6 +226,33 @@
      margin: 0;
  }
 
+ /* WRAPPER čo drží viewport a skaluje vnútro */
+ .fit {
+     height: 100dvh;
+     /* 100% výšky okna, rešpektuje iOS toolbary */
+     overflow: auto;
+     /* ak by bolo treba scrollovať (dlhé modaly a pod.) */
+     display: grid;
+     place-items: start center;
+     /* centrovanie .app vodorovne, hore zvisle */
+ }
+
+ /* SCALE celého UI: keď je výška menšia než 1200px, zmenšíme */
+ .fit>.app {
+     --base-h: 1200;
+     /* tvoja „logická“ výška v px */
+     --scale: min(1, 100dvh / (var(--base-h) * 1px));
+
+     height: calc(var(--base-h) * 1px);
+     width: min(1430px, 100vw);
+     /* tvoja pôvodná šírka */
+     transform: scale(var(--scale));
+     transform-origin: top center;
+
+     /* voliteľné: aby si neprišiel o layout, nechaj ostatné tvoje vlastnosti */
+     /* display/grid/gap/container-type atď. zostávajú tak ako máš */
+ }
+
  .app {
      width: min(1430px, 100vw);
      height: 1200px;
