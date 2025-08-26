@@ -963,14 +963,8 @@ h2 {
 
 
 .ul-dots>li {
-    display: flex;
-    align-items: center;
-    gap: var(--space-4);
-    min-height: 40px;
-    /* podľa potreby */
     position: relative;
     padding-left: 36px;
-    /* miesto pre obrázok */
 }
 
 .ul-dots>li::before {
@@ -2810,16 +2804,12 @@ h2 {
         overflow-x: hidden;
     }
 
-    /* samotný obsah slidov nech scrolluje, keď je dlhý */
     .slide {
         position: relative;
-        /* už netreba absolútne pozicovanie na mobile */
         height: auto;
         overflow-y: auto;
         overflow-x: hidden;
         -webkit-overflow-scrolling: touch;
-        /* plynulé scrollovanie na iOS */
         padding-bottom: var(--space-8);
-        /* malý spodný „dych“ nad pagerom */
     }
 }
