@@ -210,6 +210,12 @@ document.addEventListener("change", (e) => {
     }
   } else {
     option.classList.add("is-wrong");
+    const msg =
+      form.getAttribute("data-feedback-wrong") || "Nesprávna odpoveď.";
+    if (feedbackBox) {
+      feedbackBox.innerHTML = `<div class="mcq-wrong"><p>${msg}</p></div>`;
+      feedbackBox.classList.add("show");
+    }
   }
 });
 
