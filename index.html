@@ -25,6 +25,7 @@
       </div>
     </header>
 
+
     <!-- Slides (plno-stránkové) -->
     <main id="slides">
       <!-- Slide 1 -->
@@ -35,8 +36,8 @@
             školskom prostredí</p>
         </div>
 
-        <div class="layout-2cols" style="margin-top: 10rem;">
-          <article class="card hover-lift" data-enter style="--delay:.14s">
+        <div class="layout-2cols">
+          <article class="card hover-lift flex flex-col item-center justify-center" data-enter style="--delay:.14s">
             <h2 class="mb-6 mt-0">Cieľ školenia</h2>
             <ul class="ul-dots">
               <li><strong>Porozumieť:</strong> čo je segregácia a jej dôsledky</li>
@@ -63,10 +64,10 @@
         <h2 data-enter style="--delay:.12s" class="subtitle">„Stretli ste sa počas svojej práce s niečím, čo by mohlo
           byť vnímané ako segregácia – aj keď neúmyselne?“</h2>
         <p class="subtitle mb-8" data-enter style="--delay:.16s">(odpovede sú anonymné)</p>
-        <div class="flex justify-between flex-row items-center mt-16">
-          <div class="mr-8">
+        <div class="flex justify-between flex-col md:flex-row items-center mt-16">
+          <div>
             <p class="fs-lg text-gray" data-enter style="--delay:.2s">Vyberte odpoveď:</p>
-            <form class="question" data-enter style="--delay:.26s">
+            <form class="question mt-4" data-enter style="--delay:.26s">
               <label class="radio">
                 <input type="radio" name="q2" data-template="tpl-q2-yes" />
                 <span>Áno, už som sa s tým stretol/a.</span>
@@ -82,14 +83,14 @@
             </form>
           </div>
 
-          <div class="callout-box" id="q2-box" aria-live="polite"></div>
+          <div class="callout-box mt-12 ml-0 md:ml-4 md:mt-0" id="q2-box" aria-live="polite"></div>
 
-          <template id="tpl-q2-yes">
+          <template id="tpl-q2-yes" class="text-justify">
             <p><strong>„Ďakujeme za úprimnosť.“</strong> Tento kurz vám poskytne nástroje, ako podobným situáciám
               porozumieť a ako im predchádzať.</p>
           </template>
 
-          <template id="tpl-q2-no">
+          <template id="tpl-q2-no" class="text-justify">
             <p>„Počas školenia si ukážeme konkrétne príklady z praxe – možno vás prekvapí, kde všade môže vzniknúť
               riziko segregácie.“</p>
           </template>
@@ -102,7 +103,7 @@
           <h1 class="text-gray"> Ciele školenia</h1>
         </div>
 
-        <div style="margin-top: var(--space-32);">
+        <div>
           <div class="layout-2cols">
             <article class="flip-card" data-enter style="--delay:.14s">
               <div class="flip-inner card">
@@ -127,8 +128,8 @@
                     <h2>Čo hrozí škole, ak tieto štandardy nebude rešpektovať?</h2>
                   </div>
                 </div>
-                <div class="flip-face back card-purple flex flex-column items-center justify-center text-center">
-                  <p class="fs-xl text-purple"><strong>Porozumieť právnemu rámcu a dôsledkom jeho
+                <div class="flip-face back card-green flex flex-column items-center justify-center text-center">
+                  <p class="fs-xl text-green"><strong>Porozumieť právnemu rámcu a dôsledkom jeho
                       nedodržania</strong></p>
                 </div>
               </div>
@@ -183,12 +184,57 @@
           <h1 class="text-gray">Čo je segregácia vo výchove a vzdelávaní?</h1>
           <h2 data-enter style="--delay:.12s" class="subtitle">Segregácia je formou diskriminácie</h2>
         </div>
-        <div class="layout-3cols-narrow mb-6">
+        <div class="layout-1col md:hidden text-justify">
+          <h2 class="text-center mb-2"><strong>Antidiskriminačný zákon</strong></h2>
+          <article class="card hover-lift flex flex-col justify-center">
+            <h3 class="text-center text-red fs-xl mt-0"><strong>Priama diskriminácia</strong></h3>
+            <p class="mt-2 fs-lg">
+              „Konanie alebo opomenutie, pri ktorom sa <strong>s osobou</strong> zaobchádza menej priaznivo, ako sa
+              zaobchádza, zaobchádzalo alebo by sa mohlo zaobchádzať <strong>s inou osobou</strong> v porovnateľnej
+              situácii.“<sup>15</sup>
+            </p>
+          </article>
+          <article class="card hover-lift flex flex-col justify-center">
+            <h3 class="text-center text-blue fs-xl mt-8"><strong>Nepriama diskriminácia</strong></h3>
+            <p class="mt-2 fs-lg">
+              „Navonok neutrálny predpis, rozhodnutie, pokyn alebo prax, ktoré znevýhodňujú alebo by mohli
+              znevýhodňovať
+              <strong>osobu v porovnaní s inou osobou</strong>; nepriama diskriminácia nie je, ak takýto predpis,
+              rozhodnutie, pokyn alebo prax sú objektívne odôvodnené sledovaním oprávneného záujmu a sú primerané a
+              nevyhnutné na dosiahnutie takého záujmu.“<sup>16</sup>
+            </p>
+          </article>
+
+          <h2 class="text-center mb-2 mt-8"><strong>Školský zákon</strong></h2>
+          <article class="card hover-lift flex flex-col justify-center">
+            <h3 class="text-center text-red fs-xl mt-0"><strong>Segregácia vo forme priamej diskriminácie</strong>
+            </h3>
+            <p class="mt-2 fs-lg">
+              Konanie alebo opomenutie, pri ktorom sa <strong>so skupinou osôb</strong> zaobchádza menej priaznivo,
+              ako
+              sa zaobchádza, zaobchádzalo alebo by sa mohlo zaobchádzať <strong>s inou skupinou osôb</strong> v
+              porovnateľnej situácii.
+            </p>
+          </article>
+          <article class="card hover-lift flex flex-col justify-center">
+            <h3 class="text-center text-blue fs-xl mt-0"><strong>Segregácia vo forme priamej diskriminácie</strong>
+            </h3>
+            <p class="mt-2 fs-lg">
+              Navonok neutrálny predpis, rozhodnutie, pokyn alebo prax, ktoré znevýhodňujú alebo by mohli
+              znevýhodňovať <strong>skupinu osôb v porovnaní s inou skupinou osôb</strong>; nepriama diskriminácia nie
+              je, ak takýto
+              predpis, rozhodnutie, pokyn alebo prax sú objektívne odôvodnené sledovaním oprávneného záujmu a sú
+              primerané a nevyhnutné na dosiahnutie takého záujmu.
+            </p>
+          </article>
+
+        </div>
+        <div class="layout-3cols-narrow hidden md:grid mb-6">
           <h2 class="text-center mb-2"><strong>Antidiskriminačný zákon</strong></h2>
           <div></div>
           <h2 class="text-center mb-2"><strong>Školský zákon</strong></h2>
         </div>
-        <div class="layout-3cols-narrow mb-16">
+        <div class="layout-3cols-narrow hidden md:grid mb-16">
           <!-- 1. karta -->
           <article class="card hover-lift flex flex-col justify-center">
             <h3 class="text-center text-red fs-xl mt-0"><strong>Priama diskriminácia</strong></h3>
@@ -217,7 +263,7 @@
             </p>
           </article>
         </div>
-        <div class="layout-3cols-narrow">
+        <div class="layout-3cols-narrow hidden md:grid">
           <!-- 3. karta -->
           <article class="card hover-lift flex flex-col justify-center">
             <h3 class="text-center text-blue fs-xl mt-0"><strong>Nepriama diskriminácia</strong></h3>
@@ -253,7 +299,7 @@
 
       <!-- Slide 5 -->
       <section class="slide" data-title="Čo je segregácia vo výchove a vzdelávaní?">
-        <div class="text-left" style="margin-top: var(--space-24)" data-enter style="--delay:.05s">
+        <div class="text-left" data-enter style="--delay:.05s">
           <h1>Čo je segregácia vo výchove a vzdelávaní?</h1>
           <h2 class="subtitle"> Segregácia nie je nový pojem – ale spôsob, ako ho chápe školské prostredie, je veľmi
             konkrétny.</h1>
@@ -262,14 +308,14 @@
         <div class="text-left">
           <h3 class="fs-xl">V právnych predpisoch rozoznávame dva základné typy diskriminácie:</h3>
         </div>
-        <div class="layout-2cols">
+        <div class="layout-2cols mt-4">
           <div class="card hover-lift card-red" data-enter style="--delay:.14s">
-            <p class="mt-4 fs-xl text-red">
+            <p class="fs-xl text-red">
               Priama diskriminácia – keď niekomu zámerne dávame horšie podmienky než iným, hoci si to nezaslúži.
             </p>
           </div>
           <div class="card hover-lift card-blue" data-enter style="--delay:.24s">
-            <p class="mt-4 fs-xl text-blue">
+            <p class="fs-xl text-blue">
               Nepriama diskriminácia – keď na prvý pohľad rovnaké pravidlo dopadne horšie na konkrétnu skupinu, hoci
               to
               nebolo zámerom.
@@ -279,7 +325,7 @@
 
         <p class="mt-16 fs-xl"><strong>V školách to znamená napríklad:</strong></p>
 
-        <div class="layout-2cols">
+        <div class="layout-2cols mt-4">
           <article class="flip-card" data-enter style="--delay:.14s">
             <div class="flip-inner card">
               <div class="flip-face front">
@@ -288,8 +334,8 @@
                   <h2>nepriama segregácia</h2>
                 </div>
               </div>
-              <div class="flip-face back card-orange flex flex-column items-center justify-center text-center">
-                <p class="fs-xl" style="color: white;"><strong>rozdeliť triedy „aby mali pokoj“ – no zrazu sú v jednej
+              <div class="flip-face back card-yellow flex flex-column items-center justify-center text-center">
+                <p class="fs-xl text-primary"><strong>rozdeliť triedy „aby mali pokoj“ – no zrazu sú v jednej
                     triede len deti z
                     marginalizovaných skupín</strong></p>
               </div>
@@ -305,8 +351,8 @@
                   <h2>priama diskriminácia</h2>
                 </div>
               </div>
-              <div class="flip-face back card-purple flex flex-column items-center justify-center text-center">
-                <p class="fs-xl" style="color: white;"><strong>dať deťom z MRK horšie pomôcky alebo menej
+              <div class="flip-face back card-yellow flex flex-column items-center justify-center text-center">
+                <p class="fs-xl text-primary"><strong>dať deťom z MRK horšie pomôcky alebo menej
                     pozornosti</strong></p>
               </div>
             </div>
@@ -362,10 +408,11 @@
 
         <p class="mt-4 fs-xl">Otázka pre účastníka:</p>
 
-        <div class="flex justify-between flex-row items-start  pt-8">
-          <div class="mr-8">
-            <p class="fs-lg text-gray mt-0" data-enter style="--delay:.2s"> Je to podľa vás príklad segregácie?</p>
-            <form class="question" data-enter style="--delay:.26s">
+        <div class="flex justify-between flex-col items-start md:item-center  pt-8">
+          <div>
+            <p class="fs-2xl text-gray mt-0" data-enter style="--delay:.2s"><strong>Je to podľa vás príklad
+                segregácie?</strong></p>
+            <form class="flex flex-col md:flex-row mt-4" data-enter style="--delay:.26s">
               <label class="radio">
                 <input type="radio" name="q3" data-template="tpl-q3-yes" />
                 <span>ÁNO</span>
@@ -377,7 +424,7 @@
             </form>
           </div>
 
-          <div class="mt-0 callout-box" id="q3-box" aria-live="polite"></div>
+          <div class="mt-4 callout-box" id="q3-box" aria-live="polite"></div>
 
           <template id="tpl-q3-yes">
             <p><strong> Áno, ide o neprípustné oddelenie na základe pôvodu – bez ohľadu na zámer školy. Dôležitý je
@@ -385,7 +432,11 @@
           </template>
 
           <template id="tpl-q3-no">
-            <p>Chyba text</p>
+            <p><strong>ÁNO.</strong> Správne ste označili, že ide o segregáciu.
+              Krátky komentár: ak sú všetky deti z osady sústredené do jednej triedy len na základe ich pôvodu, ide o
+              systematické oddeľovanie určitej skupiny, čo zhoršuje rovnosť príležitostí, stigmatizuje deti a často
+              vedie k horším vzdelávacím výsledkom. Takéto usporiadanie by malo byť preskúmané a nahradené inkluzívnymi
+              opatreniami, ktoré podporujú rovnosť, zmierňujú predsudky a zabezpečia podporu pre všetky deti.</p>
           </template>
         </div>
 
@@ -395,10 +446,13 @@
         <div data-enter style="--delay:.05s">
           <h1 class="text-gray">Reflexia</h1>
           <h2 class="subtitle">🧩 Zamyslenie: Skúste priradiť príklady k typom diskriminácie.</h2>
-          <h3 class="mb-6">🧠 Ktorý z nasledujúcich príkladov môže predstavovať:<br>
-            <span class="fs-base">A) priamu diskrimináciu &nbsp;&nbsp; B) nepriamu diskrimináciu</span>
-
-          </h3>
+          <div class="flex flex-col md:flex-row md:justify-between md:items-center ">
+            <h3 class="mb-6">🧠 Ktorý z nasledujúcich príkladov môže predstavovať:
+            </h3>
+            <p class="mb-6 md:mb-0"><span class="fs-base">A) priamu diskrimináciu &nbsp;&nbsp; B) nepriamu
+                diskrimináciu</span>
+            </p>
+          </div>
         </div>
 
         <ol class="ab-list" data-enter style="--delay:.14s">
@@ -408,7 +462,7 @@
                 <div class="ab-prompt fs-xl">
                   1. Deti, ktoré bývajú v osade, sú automaticky umiestňované do špeciálnej triedy.
                 </div>
-                <div class="ab-actions" role="group" aria-label="Odpoveď 1">
+                <div class="ab-actions md:mt-2" role="group" aria-label="Odpoveď 1">
                   <label class="ab-choice"><input type="radio" name="ref-1" data-choice="A"><span>A</span></label>
                   <label class="ab-choice"><input type="radio" name="ref-1" data-choice="B"><span>B</span></label>
                 </div>
@@ -424,7 +478,7 @@
                 <div class="ab-prompt fs-xl">
                   2. Škola má pravidlo, že na výlet môže ísť len dieťa, ktoré má obedy riadne uhradené.
                 </div>
-                <div class="ab-actions" role="group" aria-label="Odpoveď 2">
+                <div class="ab-actions md:mt-2" role="group" aria-label="Odpoveď 2">
                   <label class="ab-choice"><input type="radio" name="ref-2" data-choice="A"><span>A</span></label>
                   <label class="ab-choice"><input type="radio" name="ref-2" data-choice="B"><span>B</span></label>
                 </div>
@@ -439,7 +493,7 @@
                 <div class="ab-prompt fs-xl">
                   3. V jednej triede sú umiestnené len deti z MRK, pretože sa „lepšie medzi sebou dohovoria“.
                 </div>
-                <div class="ab-actions" role="group" aria-label="Odpoveď 3">
+                <div class="ab-actions md:mt-2" role="group" aria-label="Odpoveď 3">
                   <label class="ab-choice"><input type="radio" name="ref-3" data-choice="A"><span>A</span></label>
                   <label class="ab-choice"><input type="radio" name="ref-3" data-choice="B"><span>B</span></label>
                 </div>
@@ -455,7 +509,7 @@
                 <div class="ab-prompt fs-xl">
                   4. Pri zadávaní projektov učiteľ vyžaduje, aby každé dieťa malo doma prístup k internetu.
                 </div>
-                <div class="ab-actions" role="group" aria-label="Odpoveď 4">
+                <div class="ab-actions md:mt-2" role="group" aria-label="Odpoveď 4">
                   <label class="ab-choice"><input type="radio" name="ref-4" data-choice="A"><span>A</span></label>
                   <label class="ab-choice"><input type="radio" name="ref-4" data-choice="B"><span>B</span></label>
                 </div>
@@ -471,11 +525,14 @@
           <h1 class="text-gray">Zhrnutie</h1>
         </div>
 
-        <article class="card hover-lift center-self center-y w-narrow" style="margin-top: var(--space-40)" data-enter
-          style="--delay:.12s">
-          <ul class="ul-dots fs-xl">
+        <article class="card hover-lift center-self center-y w-narrow" data-enter style="--delay:.12s">
+          <ul class="ul-dots fs-2xl">
             <li>Segregácia môže vznikať aj nechtiac – napríklad bežnými rozhodnutiami, ktoré dopadnú horšie na jednu
               skupinu žiakov.</li>
+          </ul>
+        </article>
+        <article class="card hover-lift center-self center-y mt-8 w-narrow" data-enter style="--delay:.12s">
+          <ul class="ul-dots fs-2xl">
             <li>Preto je dôležité sledovať nielen úmysel, ale aj dopad rozhodnutí školy.</li>
           </ul>
         </article>
@@ -489,7 +546,7 @@
             z určitých skupín majú horšie podmienky na vzdelávanie.</h2>
         </div>
 
-        <article class="card hover-lift mt-16" data-enter style="--delay:.12s">
+        <article class="card hover-lift mt-8 md:mt-16" data-enter style="--delay:.12s">
           <h2 class="mt-0 mb-6">✔️ Môže to byť napríklad:</h2>
           <ul class="ul-dots fs-xl">
             <li>Osobitná trieda pre deti z osady „kvôli disciplíne“.</li>
@@ -599,7 +656,7 @@
         </div>
 
         <!-- Obsah vertikálne v strede -->
-        <div class="center-stack">
+        <div class="center-stack mt-8 md:mt-0">
           <div class="w-wide" data-enter style="--delay:.12s">
             <p class="quote-hero"><strong>🧠 „Segregácia môže vznikať aj zo zdanlivo praktických dôvodov.“</strong>
             </p>
@@ -618,11 +675,11 @@
         </div>
 
         <!-- 2 stĺpce: Definícia + Prax -->
-        <div class="layout-2cols mt-16" style="margin-top: var(--space-32);">
+        <div class="layout-2cols mt-16">
           <!-- Definícia -->
           <article class="card hover-lift" style="--delay:.12s">
             <h2 class="mt-0 mb-6">Definícia</h2>
-            <p class="fs-lg mb-0">
+            <p class="fs-lg mb-0 text-justify">
               Segregácia vo výchove a vzdelávaní je konanie alebo výsledok konania či nekonania, v dôsledku ktorého sa
               <strong>skupine osôb dostáva nižšia úroveň*</strong> a <strong>nižšia kvalita**</strong> vzdelávania.
               Menej priaznivé zaobchádzanie vzniká v dôsledku <strong>vylučovania a/alebo neprípustného
@@ -724,7 +781,7 @@
           <h1 class="text-gray">Záväznosť Štandardov</h1>
         </div>
 
-        <div class="layout-3cols" style="margin-top: var(--space-40);">
+        <div class="layout-3cols md:mt-16">
           <!-- 📘 Záväznosť podľa zákona -->
           <article class="card hover-lift" data-open-modal="modal-standards-law" aria-label="Záväznosť podľa zákona"
             data-enter style="--delay:.10s; cursor:pointer">
@@ -747,7 +804,7 @@
           <article class="card hover-lift" data-open-modal="modal-control" aria-label="Kto kontroluje dodržiavanie"
             data-enter style="--delay:.22s; cursor:pointer">
             <div class="flex items-center" style="gap:16px">
-              <div class="fs-3xl">🕵️</div>
+              <div class="fs-3xl">🔍</div>
               <h2 class="mt-0 mb-0">Kto kontroluje dodržiavanie?</h2>
             </div>
           </article>
@@ -759,7 +816,7 @@
           <h1 class="text-gray">Čo hrozí pri ignorovaní štandardov?</h1>
         </div>
 
-        <div class="layout-3cols" style="margin-top: var(--space-40);">
+        <div class="layout-3cols md:mt-16">
           <!-- 📘 Záväznosť podľa zákona -->
           <article class="card hover-lift" data-open-modal="modal-law" aria-label="Záväznosť podľa zákona" data-enter
             style="--delay:.10s; cursor:pointer">
@@ -796,7 +853,7 @@
         </div>
 
         <!-- Obsah vertikálne v strede -->
-        <div class="center-stack">
+        <div class="center-stack mt-8 md:mt-0">
           <div class="w-wide" data-enter style="--delay:.12s">
             <p class="quote-hero"><strong>„Dosiahnuť skutočnú inklúziu – teda také vzdelávacie podmienky, v ktorých
                 deti
@@ -813,7 +870,7 @@
         </div>
 
         <!-- Pin / hlavné posolstvo + krátke body -->
-        <article class="card hover-lift" data-enter style="--delay:.12s">
+        <article class="card hover-lift mt-4" data-enter style="--delay:.12s">
           <p class="fs-2xl mt-0 mb-4 subtitle"><strong>Inklúzia - dlhodobý proces, nie jednorazové zaradenie</strong>
           </p>
           <ul class="ul-dots fs-xl">
@@ -827,26 +884,26 @@
 
         <!-- „Stojí na“ – 4 princípy v dvoch stĺpcoch -->
         <div class="layout-2cols mt-8">
-          <article class="card card-blue hover-lift" data-enter style="--delay:.16s">
-            <h2 class="mt-0 mb-3 text-blue">Prijateľnosť</h2>
-            <p class="fs-lg mb-0" style="color: white;">Rešpekt k&nbsp;kultúrnemu a sociálnemu pozadiu detí</p>
+          <article class="card card-yellow hover-lift" data-enter style="--delay:.16s">
+            <h2 class="mt-0 mb-3 text-primary">Prijateľnosť</h2>
+            <p class="fs-lg mb-0 text-primary">Rešpekt k&nbsp;kultúrnemu a sociálnemu pozadiu detí</p>
           </article>
 
-          <article class="card card-orange hover-lift" data-enter style="--delay:.20s">
-            <h2 class="mt-0 mb-3 text-orange">Adaptabilita</h2>
-            <p class="fs-lg mb-0" style="color: white;">Učivo, hodnotenie, prístup prispôsobené konkrétnym potrebám
+          <article class="card card-yellow hover-lift" data-enter style="--delay:.20s">
+            <h2 class="mt-0 mb-3 text-primary">Adaptabilita</h2>
+            <p class="fs-lg mb-0 text-primary">Učivo, hodnotenie, prístup prispôsobené konkrétnym potrebám
             </p>
           </article>
 
-          <article class="card card-red hover-lift" data-enter style="--delay:.24s">
-            <h2 class="mt-0 mb-3 text-red">Prevencia vylúčenia</h2>
-            <p class="fs-lg mb-0" style="color: white;">Podpora proti prepadávaniu, záškoláctvu, predčasnému ukončeniu
+          <article class="card card-yellow hover-lift" data-enter style="--delay:.24s">
+            <h2 class="mt-0 mb-3 text-primary">Prevencia vylúčenia</h2>
+            <p class="fs-lg mb-0 text-primary">Podpora proti prepadávaniu, záškoláctvu, predčasnému ukončeniu
             </p>
           </article>
 
-          <article class="card card-green hover-lift" data-enter style="--delay:.28s">
-            <h2 class="mt-0 mb-3 text-green">Rovnocennosť</h2>
-            <p class="fs-lg mb-0" style="color: white;">Všetky deti sa podieľajú na spoločnom vzdelávaní</p>
+          <article class="card card-yellow hover-lift" data-enter style="--delay:.28s">
+            <h2 class="mt-0 mb-3 text-primary">Rovnocennosť</h2>
+            <p class="fs-lg mb-0 text-primary">Všetky deti sa podieľajú na spoločnom vzdelávaní</p>
           </article>
         </div>
 
@@ -863,7 +920,7 @@
           <h1 class="text-gray">3 rizikové oblasti podľa Európskej komisie (EK)</h1>
         </div>
 
-        <div class="layout-3cols" style="margin-top: var(--space-32);">
+        <div class="layout-3cols md:mt-16">
           <!-- EK1 -->
           <article class="card hover-lift" data-enter style="--delay:.10s; border-top:4px solid var(--red-500);">
             <h2 class="mt-0 mb-4">EK1 – Diagnostická segregácia</h2>
@@ -909,7 +966,7 @@
           <p class="mt-6 mb-7 fs-xl"><strong>Čo by ste mali spraviť?</strong></p>
 
           <!-- Single-choice MCQ (správna je prvá možnosť) -->
-          <form class="mcq"
+          <form class="mcq mt-8"
             data-feedback="Správne. Práve vnútorné predpisy, organizačné zvyklosti či rozdeľovanie do tried môže byť znakom systémovej segregácie (EK2).">
             <label class="radio mcq-option" data-correct="true">
               <input type="radio" name="mcq-1" />
@@ -947,7 +1004,7 @@
           <p class="mt-6 mb-7 fs-xl"><strong>Čo je najsprávnejšia reakcia vedenia?</strong></p>
 
           <!-- Single-choice MCQ (správna je prvá možnosť) -->
-          <form class="mcq"
+          <form class="mcq mt-8"
             data-feedback="Správne. Umiestňovanie bez odborných dôvodov alebo podľa stereotypov je porušením antidiskriminačného zákona a môže viesť k sankciám.">
             <label class="radio mcq-option" data-correct="true">
               <input type="radio" name="mcq-1" />
@@ -984,7 +1041,7 @@
           <p class="mt-6 mb-7 fs-xl"><strong>Ktorý z týchto princípov by mal byť základom?</strong></p>
 
           <!-- Single-choice MCQ (správna je prvá možnosť) -->
-          <form class="mcq"
+          <form class="mcq mt-8"
             data-feedback="Správne. Desegregácia nie je len fyzické spojenie detí – kľúčová je úprava prostredia, rešpekt a rovnosť šancí.">
             <label class="radio mcq-option" data-correct="true">
               <input type="radio" name="mcq-1" />
@@ -1013,7 +1070,7 @@
           <h2 class="subtitle">Kto monitoruje desegregáciu na Slovensku?</h3>
         </div>
 
-        <div class="layout-3cols" style="margin-top: var(--space-24);">
+        <div class="layout-3cols">
           <!-- EK1 -->
           <article class="card hover-lift" style="--delay:.10s; border-top:4px solid var(--red-500);">
             <h2 class="mt-0 mb-4">Sleduje riziká segregácie na národnej úrovni</h2>
@@ -1092,7 +1149,7 @@
                 <div class="ab-prompt fs-xl">
                   1. Neposlušné dieťa potrebuje prísnejší režim a pevné tresty.
                 </div>
-                <div class="ab-actions" role="group" aria-label="Otázka 1">
+                <div class="ab-actions mt-0 md:mt-4" role="group" aria-label="Otázka 1">
                   <label class="radio tf-option"><input type="radio" name="tf-1"
                       data-val="mytus"><span>MÝTUS</span></label>
                   <label class="radio tf-option"><input type="radio" name="tf-1"
@@ -1112,7 +1169,7 @@
                 <div class="ab-prompt fs-xl">
                   2. Trauma ovplyvňuje schopnosť dieťaťa sústrediť sa a učiť sa.
                 </div>
-                <div class="ab-actions" role="group" aria-label="Otázka 2">
+                <div class="ab-actions mt-0 md:mt-4" role="group" aria-label="Otázka 2">
                   <label class="radio tf-option"><input type="radio" name="tf-2"
                       data-val="mytus"><span>MÝTUS</span></label>
                   <label class="radio tf-option"><input type="radio" name="tf-2"
@@ -1132,7 +1189,7 @@
                 <div class="ab-prompt fs-xl">
                   3. Učiteľ musí riešiť psychické problémy dieťaťa.
                 </div>
-                <div class="ab-actions" role="group" aria-label="Otázka 3">
+                <div class="ab-actions mt-0 md:mt-4" role="group" aria-label="Otázka 3">
                   <label class="radio tf-option"><input type="radio" name="tf-3"
                       data-val="mytus"><span>MÝTUS</span></label>
                   <label class="radio tf-option"><input type="radio" name="tf-3"
@@ -1152,7 +1209,7 @@
                 <div class="ab-prompt fs-xl">
                   4. Správanie dieťaťa môže byť spôsob, ako komunikuje svoj vnútorný svet.
                 </div>
-                <div class="ab-actions" role="group" aria-label="Otázka 4">
+                <div class="ab-actions mt-0 md:mt-4" role="group" aria-label="Otázka 4">
                   <label class="radio tf-option"><input type="radio" name="tf-4"
                       data-val="mytus"><span>MÝTUS</span></label>
                   <label class="radio tf-option"><input type="radio" name="tf-4"
@@ -1172,7 +1229,7 @@
                 <div class="ab-prompt fs-xl">
                   5. Ak budem tolerantný k nevhodnému správaniu, deti sa nikdy nenaučia hranice.
                 </div>
-                <div class="ab-actions" role="group" aria-label="Otázka 5">
+                <div class="ab-actions mt-0 md:mt-4" role="group" aria-label="Otázka 5">
                   <label class="radio tf-option"><input type="radio" name="tf-5"
                       data-val="mytus"><span>MÝTUS</span></label>
                   <label class="radio tf-option"><input type="radio" name="tf-5"
@@ -1194,8 +1251,7 @@
         </div>
 
         <!-- Hlavné posolstvo -->
-        <article class="card hover-lift" data-enter
-          style="--delay:.10s; border-left:4px solid var(--primary); margin-top: var(--space-32);">
+        <article class="card hover-lift" data-enter style="--delay:.10s; border-left:4px solid var(--primary); ">
           <h2 class="mt-0 mb-6">Trauma sa neprejavuje jedným spôsobom.</h2>
           <p class="fs-lg mb-4">Niektoré deti kričia, iné mlčia. Niektoré rebelujú, iné sa stiahnu.</p>
           <p class="fs-lg mb-0">Trauma nemá jednotný obraz – má však jeden spoločný menovateľ: potrebuje byť
@@ -1285,7 +1341,7 @@
 
       <!-- Slide: Identifikácia symptómov traumy – opatrenia -->
       <section class="slide layout-1col" data-title="Identifikácia symptómov traumy – opatrenia">
-        <p class="fs-2xl text-left mb-8">
+        <p class="fs-2xl text-justify mb-8">
           <i>„Možno si kladiete otázku: Čo môžeme v škole reálne urobiť, ak máme málo času, málo ľudí a veľa
             povinností? Odpoveď je jednoduchá – netreba veľké projekty, ale malé a zmysluplné opatrenia. Pozrime sa na
             konkrétne príklady.“</i>
@@ -1339,12 +1395,12 @@
         <h1>
           Praktické kroky pri zavádzaní trauma-informovaného prístupu v škole
         </h1>
-        <p class="fs-2xl text-left mb-8">
+        <p class="fs-2xl text-left mb-8 text-justify">
           <i>„Ak chceme, aby škola bola citlivá k žiakom, ktorí zažívajú traumy, nestačí len porozumieť téme – je
             potrebné ju krok za krokom preniesť do každodenného života školy.“</i>
         </p>
 
-        <p class="fs-lg">Krok č. 1 – Začať od seba: tím, ktorý rozumie</p>
+        <p class="fs-lg mb-8">Krok č. 1 – Začať od seba: tím, ktorý rozumie</p>
 
         <div class=" layout-2cols mb-8">
           <article class="card hover-lift flex flex-row items-center" data-enter style="--delay:.12s">
@@ -1397,7 +1453,7 @@
             diagnózy. Nie však všetky tieto diagnózy sú vždy objektívne, najmä pri marginalizovaných skupinách.“</i>
         </p>
 
-        <p class="fs-lg text-primary">Diagnózy a disproporcie:</p>
+        <p class="fs-lg mb-8 text-primary">Diagnózy a disproporcie:</p>
 
         <div class=" layout-2cols mb-8">
           <article class="card hover-lift flex flex-row items-center" data-enter style="--delay:.12s">
@@ -1454,43 +1510,43 @@
             komunita majú významnú úlohu.“</i>
         </p>
 
-        <h2 class="mb-4 text-orange mt-12" data-enter style="--delay:.08s">Opatrenia, ktoré pomáhajú:</h2>
+        <h2 class="mb-4 text-primary mt-12" data-enter style="--delay:.08s">Opatrenia, ktoré pomáhajú:</h2>
         <div class="layout-4cols" style="margin-top:.5rem">
-          <article class="card card-orange hover-lift" data-open-modal="modal-opatrenia-1" data-enter
+          <article class="card card-yellow hover-lift" data-open-modal="modal-opatrenia-1" data-enter
             style="--delay:.12s; cursor:pointer">
-            <h3 class="mt-0 mb-0" style="color: wheat;">1. Priebežné vyhodnocovanie rozhodnutí školy</h3>
+            <h3 class="mt-0 mb-0 text-primary">1. Priebežné vyhodnocovanie rozhodnutí školy</h3>
           </article>
-          <article class="card card-orange hover-lift" data-open-modal="modal-opatrenia-2" data-enter
+          <article class="card card-yellow hover-lift" data-open-modal="modal-opatrenia-2" data-enter
             style="--delay:.16s; cursor:pointer">
-            <h3 class="mt-0 mb-0" style="color: wheat;">2. Práca s triedou namiesto vyčleňovania</h3>
+            <h3 class="mt-0 mb-0 text-primary">2. Práca s triedou namiesto vyčleňovania</h3>
           </article>
-          <article class="card card-orange hover-lift" data-open-modal="modal-opatrenia-3" data-enter
+          <article class="card card-yellow hover-lift" data-open-modal="modal-opatrenia-3" data-enter
             style="--delay:.20s; cursor:pointer">
-            <h3 class="mt-0 mb-0" style="color: wheat;">3. Spolupráca s komunitou a psychológom</h3>
+            <h3 class="mt-0 mb-0 text-primary">3. Spolupráca s komunitou a psychológom</h3>
           </article>
-          <article class="card card-orange hover-lift" data-open-modal="modal-opatrenia-4" data-enter
+          <article class="card card-yellow hover-lift" data-open-modal="modal-opatrenia-4" data-enter
             style="--delay:.24s; cursor:pointer">
-            <h3 class="mt-0 mb-0" style="color: wheat;">4. Školenia o kultúrnej senzitivite</h3>
+            <h3 class="mt-0 mb-0 text-primary">4. Školenia o kultúrnej senzitivite</h3>
           </article>
         </div>
 
-        <h2 class="mt-12 mb-4 text-red" data-enter style="--delay:.28s">Indikátory rizika – čo sledovať?</h2>
+        <h2 class="mt-12 mb-4 text-orange" data-enter style="--delay:.28s">Indikátory rizika – čo sledovať?</h2>
         <div class="layout-4cols" style="margin-top:.5rem">
-          <article class="card card-red hover-lift" data-open-modal="modal-indikatory-1" data-enter
+          <article class="card card-orange hover-lift" data-open-modal="modal-indikatory-1" data-enter
             style="--delay:.32s; cursor:pointer">
-            <h3 class="mt-0 mb-0" style="color: coral;">Segregované triedy</h3>
+            <h3 class="mt-0 mb-0" style="color: wheat;">Segregované triedy</h3>
           </article>
-          <article class="card card-red hover-lift" data-open-modal="modal-indikatory-2" data-enter
+          <article class="card card-orange hover-lift" data-open-modal="modal-indikatory-2" data-enter
             style="--delay:.36s; cursor:pointer">
-            <h3 class="mt-0 mb-0" style="color: coral;">Rôzne pravidlá pre 'problémové' deti</h3>
+            <h3 class="mt-0 mb-0" style="color: wheat;">Rôzne pravidlá pre 'problémové' deti</h3>
           </article>
-          <article class="card card-red hover-lift" data-open-modal="modal-indikatory-3" data-enter
+          <article class="card card-orange hover-lift" data-open-modal="modal-indikatory-3" data-enter
             style="--delay:.40s; cursor:pointer">
-            <h3 class="mt-0 mb-0" style="color: coral;">Disciplinárne opatrenia</h3>
+            <h3 class="mt-0 mb-0" style="color: wheat;">Disciplinárne opatrenia</h3>
           </article>
-          <article class="card card-red hover-lift" data-open-modal="modal-indikatory-4" data-enter
+          <article class="card card-orange hover-lift" data-open-modal="modal-indikatory-4" data-enter
             style="--delay:.44s; cursor:pointer">
-            <h3 class="mt-0 mb-0" style="color: coral;">Nadmerné zastúpenie v 1. ročníkoch</h3>
+            <h3 class="mt-0 mb-0" style="color: wheat;">Nadmerné zastúpenie v 1. ročníkoch</h3>
           </article>
         </div>
       </section>
@@ -1511,7 +1567,7 @@
           <article class="card hover-lift flex flex-row items-center" data-enter style="--delay:.12s">
             <img src="./img/dots.svg" width="46" height="46" class="mr-4" alt="">
             <div>
-              <h3 class="fs-lg" style="color: #dd5858;">Zloženie tried – etnická a sociálna homogenita:</h3>
+              <h3 class="fs-lg text-primary">Zloženie tried – etnická a sociálna homogenita:</h3>
               <p class="fs-lg mt-0 mb-0">„Ak triedy nevykazujú rozmanitosť, môže to naznačovať nevedomú segregáciu
                 alebo
                 nepriamu diskrimináciu.“</p>
@@ -1520,7 +1576,7 @@
           <article class="card hover-lift flex flex-row items-center" data-enter style="--delay:.22s">
             <img src="./img/dots.svg" width="46" height="46" class="mr-4" alt="">
             <div>
-              <h3 class="fs-lg" style="color: #dd5858;">Disciplinárne opatrenia voči žiakom z marginalizovaných
+              <h3 class="fs-lg text-primary">Disciplinárne opatrenia voči žiakom z marginalizovaných
                 komunít:
               </h3>
               <p class="fs-lg mt-0 mb-0">„Sledujte, kto a ako často dostáva pokarhania, dôtky alebo výchovné
@@ -1533,7 +1589,7 @@
           <article class="card hover-lift flex flex-row items-center" data-enter style="--delay:.32s">
             <img src="./img/dots.svg" width="46" height="46" class="mr-4" alt="">
             <div>
-              <h3 class="fs-lg" style="color: #dd5858;"> Výsledky žiakov, prestupy, predčasné odchody:</h3>
+              <h3 class="fs-lg text-primary"> Výsledky žiakov, prestupy, predčasné odchody:</h3>
               <p class="fs-lg mt-0 mb-0">„Ak niektoré skupiny žiakov opúšťajú školu predčasne alebo prestupujú, je
                 dôležité pýtať sa prečo.“</p>
             </div>
@@ -1541,7 +1597,7 @@
           <article class="card hover-lift flex flex-row items-center" data-enter style="--delay:.42s">
             <img src="./img/dots.svg" width="46" height="46" class="mr-4" alt="">
             <div>
-              <h3 class="fs-lg" style="color: #dd5858;"> Prístup k podporným opatreniam – je rovnaký?</h3>
+              <h3 class="fs-lg text-primary"> Prístup k podporným opatreniam – je rovnaký?</h3>
               <p class="fs-lg mt-0 mb-0">„Majú všetky deti rovnaký prístup k asistentom, špeciálnym pedagógom, pomoci
                 pri učení? Alebo sa pomoc sústreďuje len na vybrané deti?“</p>
             </div>
@@ -1552,13 +1608,18 @@
       <!-- Slide: 5 kľúčových oblastí monitorovania -->
       <section class="slide layout-1col" data-title="5 kľúčových oblastí monitorovania">
         <div class="text-left mb-12" data-enter style="--delay:.05s">
-          <h1 class="text-gray">📌 5 kľúčových oblastí monitorovania</h1>
+          <h1 class="text-gray flex items-center">
+            <span>
+              <img src="./img/dots.svg" width="16" alt="">
+            </span>
+            <span class="pl-4">5 kľúčových oblastí monitorovania</span>
+          </h1>
         </div>
 
-        <div class="layout-3cols mt-12" style="margin-top: var(--space-24);">
+        <div class="layout-3cols mt-12">
           <!-- 1 -->
           <article class="card kpi-card hover-lift flex items-center"
-            style="--accent: var(--orange-500); border-left:4px solid var(--accent); cursor:pointer"
+            style="--accent: var(--primary); border-left:4px solid var(--accent); cursor:pointer"
             data-open-modal="modal-km-1" data-enter style="--delay:.10s">
             <img src="./img/1.svg" width="40" height="40" class="mr-4" alt="1">
             <h3 class="mt-0 mb-0">Demografia školy</h3>
@@ -1566,7 +1627,7 @@
 
           <!-- 2 -->
           <article class="card kpi-card hover-lift flex items-center"
-            style="--accent: var(--violet-500); border-left:4px solid var(--accent); cursor:pointer"
+            style="--accent: var(--primary); border-left:4px solid var(--accent); cursor:pointer"
             data-open-modal="modal-km-2" data-enter style="--delay:.14s">
             <img src="./img/2.svg" width="40" height="40" class="mr-4" alt="2">
             <h3 class="mt-0 mb-0">Zloženie tried a skupín</h3>
@@ -1584,7 +1645,7 @@
 
           <!-- 4 -->
           <article class="card kpi-card hover-lift flex items-center"
-            style="--accent: var(--red-500); border-left:4px solid var(--accent); cursor:pointer"
+            style="--accent: var(--primary); border-left:4px solid var(--accent); cursor:pointer"
             data-open-modal="modal-km-4" data-enter style="--delay:.22s">
             <img src="./img/4.svg" width="40" height="40" class="mr-4" alt="4">
             <h3 class="mt-0 mb-0">Disciplinárne opatrenia</h3>
@@ -1592,7 +1653,7 @@
 
           <!-- 5 (mierne zvýraznený, zaberie 2 stĺpce) -->
           <article class="card kpi-card hover-lift flex items-center"
-            style="--accent: var(--indigo-600); border-left:4px solid var(--accent); cursor:pointer;"
+            style="--accent: var(--primary); border-left:4px solid var(--accent); cursor:pointer;"
             data-open-modal="modal-km-5" data-enter style="--delay:.26s">
             <img src="./img/5.svg" width="40" height="40" class="mr-4" alt="5">
             <h3 class="mt-0 mb-0">Prístup ku kvalitným zdrojom</h3>
@@ -1602,20 +1663,25 @@
 
       <section class="slide layout-1col" data-title="5 pilierov prevencie segregácie">
         <div class="text-left mb-12" data-enter style="--delay:.05s">
-          <h1 class="text-gray">5 pilierov prevencie segregácie</h1>
+          <h1 class="text-gray flex items-center">
+            <span>
+              <img src="./img/dots.svg" width="16" alt="">
+            </span>
+            <span class="pl-4">5 pilierov prevencie segregácie</span>
+          </h1>
         </div>
 
-        <div class="layout-3cols mt-12" style="margin-top: var(--space-24);">
+        <div class="layout-3cols mt-12">
           <!-- 1 -->
           <article class="card kpi-card hover-lift flex items-center" data-open-modal="modal-pillars-1" data-enter
-            style="--delay:.10s; cursor:pointer; --accent: var(--orange-500); border-left:4px solid var(--accent);">
+            style="--delay:.10s; cursor:pointer; --accent: var(--primary); border-left:4px solid var(--accent);">
             <img src="./img/1.svg" width="40" height="40" class="mr-4" alt="1">
             <h3 class="mt-0 mb-0">Posun v hodnotách a postojoch</h3>
           </article>
 
           <!-- 2 -->
           <article class="card kpi-card hover-lift flex items-center" data-open-modal="modal-pillars-2" data-enter
-            style="--delay:.14s; cursor:pointer; --accent: var(--violet-500); border-left:4px solid var(--accent);">
+            style="--delay:.14s; cursor:pointer; --accent: var(--primary); border-left:4px solid var(--accent);">
             <img src="./img/2.svg" width="40" height="40" class="mr-4" alt="2">
             <h3 class="mt-0 mb-0">Implementácia záväzných štandardov</h3>
           </article>
@@ -1631,14 +1697,14 @@
         <div class="layout-2cols mt-6">
           <!-- 4 -->
           <article class="card kpi-card hover-lift flex items-center" data-open-modal="modal-pillars-4" data-enter
-            style="--delay:.22s; cursor:pointer; --accent: var(--red-500); border-left:4px solid var(--accent);">
+            style="--delay:.22s; cursor:pointer; --accent: var(--primary); border-left:4px solid var(--accent);">
             <img src="./img/4.svg" width="40" height="40" class="mr-4" alt="4">
             <h3 class="mt-0 mb-0">Podporné tímy a aktivity</h3>
           </article>
 
           <!-- 5 -->
           <article class="card kpi-card hover-lift flex items-center" data-open-modal="modal-pillars-5" data-enter
-            style="--delay:.26s; cursor:pointer; --accent: var(--indigo-600); border-left:4px solid var(--accent);">
+            style="--delay:.26s; cursor:pointer; --accent: var(--primary); border-left:4px solid var(--accent);">
             <img src="./img/5.svg" width="40" height="40" class="mr-4" alt="5">
             <h3 class="mt-0 mb-0">Sebahodnotenie a participácia komunity</h3>
           </article>
@@ -1681,13 +1747,12 @@
       </section>
 
       <!-- Slide: Faktory podporujúce úspešnú implementáciu -->
-      <!-- Slide: Faktory podporujúce úspešnú implementáciu -->
       <section class="slide layout-1col" data-title="Faktory podporujúce úspešnú implementáciu">
         <div class="text-left" data-enter style="--delay:.05s">
           <h1 class="text-gray">Faktory podporujúce úspešnú implementáciu</h1>
         </div>
 
-        <div class="layout-2cols mt-8" style="margin-top: var(--space-24);">
+        <div class="layout-2cols mt-8">
           <!-- 1 -->
           <article class="card hover-lift" data-enter style="--delay:.10s; border-left:4px solid var(--primary);">
             <h3 class="mt-0 mb-3">1. Jasná a zdieľaná vízia</h2>
@@ -1744,7 +1809,7 @@
             implementácie desegregačných a inkluzívnych opatrení.</h2>
         </div>
 
-        <div class="layout-2cols mt-12" style="margin-top: var(--space-24);">
+        <div class="layout-2cols mt-12">
           <!-- Prečo je dôležité -->
           <article class="card hover-lift" data-enter style="--delay:.10s; border-left:4px solid var(--primary);">
             <h3 class="fs-lg mt-0 mb-4">📌 Prečo je sebahodnotenie dôležité?</h3>
@@ -1757,7 +1822,7 @@
           </article>
 
           <!-- Ako má vyzerať kvalitné sebahodnotenie -->
-          <article class="card hover-lift" data-enter style="--delay:.14s; border-left:4px solid var(--blue-500);">
+          <article class="card hover-lift" data-enter style="--delay:.14s; border-left:4px solid var(--green-400);">
             <h3 class="fs-lg mt-0 mb-4">🛠 Ako by malo vyzerať kvalitné sebahodnotenie?</h3>
             <ul class="ul-dots fs-lg">
               <li>Pravidelné (napr. 1–2× ročne)</li>
@@ -1848,11 +1913,11 @@
   <!-- 1. Posun v hodnotách a postojoch -->
   <div class="modal" id="modal-pillars-1" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="modal-backdrop" data-close-modal></div>
-    <div class="modal-dialog accent-primary" role="document">
+    <div class="modal-dialog accent-violet" role="document">
       <button class="modal-close" data-close-modal aria-label="Zavrieť">×</button>
       <div class="flex items-center" style="gap:12px">
         <img src="./img/1.svg" width="36" height="36" alt="">
-        <h2 class="mt-0 mb-0" style="color: var(--orange-500);">Posun v hodnotách a postojoch</h2>
+        <h2 class="mt-0 mb-0 text-primary">Posun v hodnotách a postojoch</h2>
       </div>
       <p class="fs-lg mt-6 mb-4">Rovnosť, dôstojnosť a spravodlivosť musia byť východiskom školského prostredia.</p>
       <p class="fs-lg mt-0 mb-0">Podpora inkluzívnej kultúry a dialógu vytvára predpoklady pre zmeny v praxi.</p>
@@ -1862,11 +1927,11 @@
   <!-- 2. Implementácia záväzných štandardov -->
   <div class="modal" id="modal-pillars-2" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="modal-backdrop" data-close-modal></div>
-    <div class="modal-dialog accent-blue" role="document">
+    <div class="modal-dialog accent-violet" role="document">
       <button class="modal-close" data-close-modal aria-label="Zavrieť">×</button>
       <div class="flex items-center" style="gap:12px">
         <img src="./img/2.svg" width="36" height="36" alt="">
-        <h2 class="mt-0 mb-0" style="color: var(--violet-500);">Implementácia záväzných štandardov</h2>
+        <h2 class="mt-0 mb-0 text-primary">Implementácia záväzných štandardov</h2>
       </div>
       <p class="fs-lg mt-6 mb-4">Školy majú možnosť začleniť štandardy do školských poriadkov.</p>
       <p class="fs-lg mt-0 mb-0">Dôležité je vypracovať plán, ktorý obsahuje reálne kroky, ako ich napĺňať.</p>
@@ -1880,7 +1945,7 @@
       <button class="modal-close" data-close-modal aria-label="Zavrieť">×</button>
       <div class="flex items-center" style="gap:12px">
         <img src="./img/3.svg" width="36" height="36" alt="">
-        <h2 class="mt-0 mb-0" style="color: var(--primary);">Systémové opatrenia so zriaďovateľmi</h2>
+        <h2 class="mt-0 mb-0  text-primary">Systémové opatrenia so zriaďovateľmi</h2>
       </div>
       <p class="fs-lg mt-6 mb-4">Spolupráca so zriaďovateľom je kľúčová pri sledovaní rozloženia žiakov z
         marginalizovaných komunít.</p>
@@ -1892,11 +1957,11 @@
   <!-- 4. Podporné tímy a aktivity -->
   <div class="modal" id="modal-pillars-4" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="modal-backdrop" data-close-modal></div>
-    <div class="modal-dialog accent-red" role="document">
+    <div class="modal-dialog accent-violet" role="document">
       <button class="modal-close" data-close-modal aria-label="Zavrieť">×</button>
       <div class="flex items-center" style="gap:12px">
         <img src="./img/4.svg" width="36" height="36" alt="">
-        <h2 class="mt-0 mb-0" style="color: var(--red-500);">Podporné tímy a aktivity</h2>
+        <h2 class="mt-0 mb-0 text-primary">Podporné tímy a aktivity</h2>
       </div>
       <p class="fs-lg mt-6 mb-4">Asistenti, špeciálni pedagógovia a psychológovia sú nástrojmi prevencie vyčleňovania.
       </p>
@@ -1907,11 +1972,11 @@
   <!-- 5. Sebahodnotenie a participácia komunity -->
   <div class="modal" id="modal-pillars-5" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="modal-backdrop" data-close-modal></div>
-    <div class="modal-dialog accent-indigo" role="document">
+    <div class="modal-dialog accent-violet" role="document">
       <button class="modal-close" data-close-modal aria-label="Zavrieť">×</button>
       <div class="flex items-center" style="gap:12px">
         <img src="./img/5.svg" width="36" height="36" alt="">
-        <h2 class="mt-0 mb-0" style="color: var(--indigo-600);">Sebahodnotenie a participácia komunity</h2>
+        <h2 class="mt-0 mb-0 text-primary">Sebahodnotenie a participácia komunity</h2>
       </div>
       <p class="fs-lg mt-6 mb-4">Dôležitým krokom je zapojenie rodičov a žiakov.</p>
       <p class="fs-lg mt-0 mb-0">Pravidelné dotazníky, okrúhle stoly či školské rady môžu sledovať pokrok v inklúzii.
@@ -1922,11 +1987,11 @@
   <!-- 1. Demografia školy -->
   <div class="modal" id="modal-km-1" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="modal-backdrop" data-close-modal></div>
-    <div class="modal-dialog accent-primary" role="document">
+    <div class="modal-dialog accent-violet" role="document">
       <button class="modal-close" data-close-modal aria-label="Zavrieť">×</button>
       <div class="flex items-center" style="gap:12px">
         <img src="./img/1.svg" width="36" height="36" alt="">
-        <h2 class="mt-0 mb-0" style="color: var(--orange-500);">Demografia školy</h2>
+        <h2 class="mt-0 mb-0 text-primary">Demografia školy</h2>
       </div>
       <p class="fs-lg mt-6 mb-4">
         „Sledujte zloženie žiakov podľa sociálneho znevýhodnenia, jazyka, SVVP (špeciálnych výchovno-vzdelávacích
@@ -1940,11 +2005,11 @@
   <!-- 2. Zloženie tried a skupín -->
   <div class="modal" id="modal-km-2" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="modal-backdrop" data-close-modal></div>
-    <div class="modal-dialog accent-blue" role="document">
+    <div class="modal-dialog accent-violet" role="document">
       <button class="modal-close" data-close-modal aria-label="Zavrieť">×</button>
       <div class="flex items-center" style="gap:12px">
         <img src="./img/2.svg" width="36" height="36" alt="">
-        <h2 class="mt-0 mb-0" style="color: var(--violet-500);">Zloženie tried a skupín</h2>
+        <h2 class="mt-0 mb-0 text-primary">Zloženie tried a skupín</h2>
       </div>
       <p class="fs-lg mt-6 mb-4">
         „Vznikajú tzv. 'rómske triedy'? Dôležité je vnímať aj nepriame formy segregácie (napr. pomocné skupiny, nulté
@@ -1962,7 +2027,7 @@
       <button class="modal-close" data-close-modal aria-label="Zavrieť">×</button>
       <div class="flex items-center" style="gap:12px">
         <img src="./img/3.svg" width="36" height="36" alt="">
-        <h2 class="mt-0 mb-0" style="color: var(--primary);">Výsledky a testovanie</h2>
+        <h2 class="mt-0 mb-0 text-primary">Výsledky a testovanie</h2>
       </div>
       <p class="fs-lg mt-6 mb-4">
         „Zohľadňujte nielen výsledok testu, ale aj vývoj žiaka. Len porovnávanie tried nestačí – je to často
@@ -1976,11 +2041,11 @@
   <!-- 4. Disciplinárne opatrenia -->
   <div class="modal" id="modal-km-4" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="modal-backdrop" data-close-modal></div>
-    <div class="modal-dialog accent-red" role="document">
+    <div class="modal-dialog accent-violet" role="document">
       <button class="modal-close" data-close-modal aria-label="Zavrieť">×</button>
       <div class="flex items-center" style="gap:12px">
         <img src="./img/4.svg" width="36" height="36" alt="">
-        <h2 class="mt-0 mb-0" style="color: var(--red-500);">Disciplinárne opatrenia</h2>
+        <h2 class="mt-0 mb-0 text-primary">Disciplinárne opatrenia</h2>
       </div>
       <p class="fs-lg mt-6 mb-4">
         „Kto dostáva pokarhania, dôtky, znížené známky zo správania? Je to náhodné, alebo opakovane tí istí žiaci z
@@ -1994,11 +2059,11 @@
   <!-- 5. Prístup ku kvalitným zdrojom -->
   <div class="modal" id="modal-km-5" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="modal-backdrop" data-close-modal></div>
-    <div class="modal-dialog accent-green" role="document">
+    <div class="modal-dialog accent-violet" role="document">
       <button class="modal-close" data-close-modal aria-label="Zavrieť">×</button>
       <div class="flex items-center" style="gap:12px">
         <img src="./img/5.svg" width="36" height="36" alt="">
-        <h2 class="mt-0 mb-0" style="color: var(--indigo-600);">Prístup ku kvalitným zdrojom</h2>
+        <h2 class="mt-0 mb-0 text-primary">Prístup ku kvalitným zdrojom</h2>
       </div>
       <p class="fs-lg mt-6 mb-4">
         „Majú všetky deti rovnaký prístup k najlepším učiteľom, metodikám, učebniciam a podporným službám?“
@@ -2015,7 +2080,7 @@
     <div class="modal-backdrop" data-close-modal></div>
     <div class="modal-dialog" role="document">
       <button class="modal-close" data-close-modal aria-label="Zavrieť">×</button>
-      <h2 style="color: wheat;">1. Priebežné vyhodnocovanie rozhodnutí školy</h2>
+      <h2 class="text-primary">1. Priebežné vyhodnocovanie rozhodnutí školy</h2>
       <p class="fs-lg mt-6 mb-0">
         „Škola by mala priebežne sledovať, či rozhodnutia o zaradení detí nevedú k neprimeranej nadreprezentácii detí z
         určitých etnických alebo sociálnych skupín.“
@@ -2027,7 +2092,7 @@
     <div class="modal-backdrop" data-close-modal></div>
     <div class="modal-dialog" role="document">
       <button class="modal-close" data-close-modal aria-label="Zavrieť">×</button>
-      <h2 style="color: wheat;">2. Práca s triedou namiesto vyčleňovania</h2>
+      <h2 class="text-primary">2. Práca s triedou namiesto vyčleňovania</h2>
       <p class="fs-lg mt-6 mb-0">
         „Zameranie sa na prácu s celým triednym kolektívom znižuje riziko stigmatizácie jednotlivcov.“
       </p>
@@ -2038,7 +2103,7 @@
     <div class="modal-backdrop" data-close-modal></div>
     <div class="modal-dialog" role="document">
       <button class="modal-close" data-close-modal aria-label="Zavrieť">×</button>
-      <h2 style="color: wheat;">3. Spolupráca s komunitou a psychológom</h2>
+      <h2 class="text-primary">3. Spolupráca s komunitou a psychológom</h2>
       <p class="fs-lg mt-6 mb-0">
         „Rozhodnutia by nemali byť prijímané izolovane – konzultácia s odborníkmi a komunitou zvyšuje správnosť a
         férovosť postupu.“
@@ -2050,7 +2115,7 @@
     <div class="modal-backdrop" data-close-modal></div>
     <div class="modal-dialog" role="document">
       <button class="modal-close" data-close-modal aria-label="Zavrieť">×</button>
-      <h2 style="color: wheat;">4. Školenia o kultúrnej senzitivite</h2>
+      <h2 class="text-primary">4. Školenia o kultúrnej senzitivite</h2>
       <p class="fs-lg mt-6 mb-0">
         „Diagnostika a poradenstvo musia reflektovať kultúrne a sociálne špecifiká, aby nedochádzalo k skreslenému
         posúdeniu schopností detí.“
@@ -2063,7 +2128,7 @@
     <div class="modal-backdrop" data-close-modal></div>
     <div class="modal-dialog" role="document">
       <button class="modal-close" data-close-modal aria-label="Zavrieť">×</button>
-      <h2 style="color: coral;">Segregované triedy</h2>
+      <h2 class="text-orange">Segregované triedy</h2>
       <p class="fs-lg mt-6 mb-0">
         „Ak triedy vznikajú podľa etnicity či sociálneho statusu, je to signál nerovného prístupu.“
       </p>
@@ -2074,7 +2139,7 @@
     <div class="modal-backdrop" data-close-modal></div>
     <div class="modal-dialog" role="document">
       <button class="modal-close" data-close-modal aria-label="Zavrieť">×</button>
-      <h2 style="color: coral;">Rôzne pravidlá pre 'problémové' deti</h2>
+      <h2 class="text-orange">Rôzne pravidlá pre 'problémové' deti</h2>
       <p class="fs-lg mt-6 mb-0">
         „Dvojaké štandardy v správaní, hodnotení alebo disciplinárnych opatreniach treba včas identifikovať.“
       </p>
@@ -2085,7 +2150,7 @@
     <div class="modal-backdrop" data-close-modal></div>
     <div class="modal-dialog" role="document">
       <button class="modal-close" data-close-modal aria-label="Zavrieť">×</button>
-      <h2 style="color: coral;">Disciplinárne opatrenia</h2>
+      <h2 class="text-orange">Disciplinárne opatrenia</h2>
       <p class="fs-lg mt-6 mb-0">
         „Ak sa určitá skupina detí dostáva k potrestaniu častejšie, treba analyzovať prečo a akým spôsobom sa k tomu
         dospelo.“
@@ -2097,7 +2162,7 @@
     <div class="modal-backdrop" data-close-modal></div>
     <div class="modal-dialog" role="document">
       <button class="modal-close" data-close-modal aria-label="Zavrieť">×</button>
-      <h2 style="color: coral;">Nadmerné zastúpenie v 1. ročníkoch</h2>
+      <h2 class="text-orange">Nadmerné zastúpenie v 1. ročníkoch</h2>
       <p class="fs-lg mt-6 mb-0">
         „Ak zistíte nezvyčajne vysoký podiel marginalizovaných detí v najnižších ročníkoch, môže to signalizovať potrebu
         prehodnotiť obvody či proces prijímania.“
@@ -2149,7 +2214,7 @@
       <button class="modal-close" data-close-modal aria-label="Zavrieť">×</button>
       <h2>📘 Záväznosť štandardov podľa zákona</h2>
       <p class="subtitle mt-0 mb-6">§ 145 ods. 1 druhá veta školského zákona (245/2008 Z. z.):</p>
-      <p class="fs-lg mt-0 mb-0">
+      <p class="fs-lg mt-0 mb-0 text-justify">
         „Škola alebo školské zariadenie pri dodržiavaní zákazu segregácie vo výchove a vzdelávaní postupuje podľa
         štandardov, ktoré vydáva a zverejňuje Ministerstvo školstva. Tieto štandardy sú záväzné pre vypracovanie
         školského poriadku.“
@@ -2170,12 +2235,12 @@
     </div>
   </div>
 
-  <!-- 🕵️ Modal: Kto kontroluje dodržiavanie -->
+  <!-- 🔍 Modal: Kto kontroluje dodržiavanie -->
   <div class="modal" id="modal-control" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="modal-backdrop" data-close-modal></div>
     <div class="modal-dialog" role="document">
       <button class="modal-close" data-close-modal aria-label="Zavrieť">×</button>
-      <h2>🕵️ Kto kontroluje dodržiavanie?</h2>
+      <h2>🔍 Kto kontroluje dodržiavanie?</h2>
       <p class="subtitle mt-6 mb-4">
         Regionálne úrady školskej správy a Štátna školská inšpekcia sledujú:
       </p>
